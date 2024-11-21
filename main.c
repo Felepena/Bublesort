@@ -26,33 +26,3 @@
 
         return 0;
     }
-#include <stdio.h>
-
-int main() {
-        printf("Selection sort: ");
-        int INeedToSortThis[10] = {1, 5, 2, 0, 40, 5, 8, 7, 4, -1};
-        int size = sizeof(INeedToSortThis) / sizeof(INeedToSortThis[0]);
-
-        for (int i = 0; i < size - 1; i++) {
-            int smolNum = i;
-            for (int j = i + 1; j < size; j++) {
-                if (INeedToSortThis[j] < INeedToSortThis[smolNum]) {
-                    smolNum = j;
-                }
-            }
-
-            if (smolNum != i) {
-                int chosen = INeedToSortThis[i];
-                INeedToSortThis[i] = INeedToSortThis[smolNum];
-                INeedToSortThis[smolNum] = chosen;
-            }
-        }
-
-        for (int i = 0; i < size; ++i) {
-            printf("%d ", INeedToSortThis[i]);
-        }
-
-        return 0;
-    } 
-
-
